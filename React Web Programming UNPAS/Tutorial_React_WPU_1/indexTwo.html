@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Belajar React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/jsx">
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+
+      function Header({addtext}) {
+          return (<h1> Belajar React Video Pertama WPU 😍 isi yang diedit adalah {addtext ? addtext : 'Hello World (default)'} </h1>);
+      }
+
+      function HomePage() {
+          const students = ['Gilang', 'Agung', 'Saputra', 'Yudha', 'Keling'];
+          const [clicks, setClicks] = React.useState(0);
+
+          function handleClick() {
+              setClicks(clicks + 1);
+          }
+
+          return (
+              <>
+                  <Header />
+                  <Header addtext = "Menambahkan tulisan kedua" />
+
+                  <ul>
+                      {
+                          students.map((student) => (
+                              <li key={student}>{student}</li>
+                          ))
+                      }
+                  </ul>
+
+                  <button onClick={handleClick}> Click Me ({clicks}) </button>
+              </>
+          );
+      }
+      root.render(<HomePage />);
+    </script>
+  </body>
+</html>
