@@ -1,0 +1,94 @@
+.InputForm {
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+.InputBox {
+    width: 85%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: none;
+    transition: 0.2s;
+}
+
+.InputBox:focus {
+    box-shadow: 0 0 5px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.InputButton {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    margin: 12px;
+    border-radius: 10px;
+    right: 0px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(68, 83, 218);
+    color: white;
+    transition: 0.2s all;
+    box-shadow: 0 0 5px black;
+}
+.InputButton:hover {
+    cursor: pointer;
+    background-color: rgb(68, 83, 218, 0.8);
+}
+.InputButton:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+}
+
+.AllOfTodoList {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+
+}
+
+.TodoForm {
+    display: flex;
+    width: 29.5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+}
+
+.TodoFormText {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.TodoFormButton{
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .TodoForm {
+        width: 90%;
+    }
+    .TodoFormText {
+        font-size: 15px;
+    }
+    .TodoFormButton {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1200px){
+    .AllOfTodoList{
+        width: 100%;
+    }
+    .TodoForm{
+        width: 45%;
+    }
+}
